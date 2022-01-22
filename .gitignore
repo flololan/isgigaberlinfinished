@@ -3,8 +3,10 @@ node_modules
 /build
 /.svelte-kit
 /package
+/.vscode
 .env
 .env.*
 !.env.example
-.vercel
-.output
+
+/static/content-index.json
+/static/sitemap.xml

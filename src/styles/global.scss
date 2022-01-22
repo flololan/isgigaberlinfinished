@@ -1,0 +1,19 @@
+@import 'defaultValues';
+@import 'fonts';
+
+html, body, #svelte {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+
+  &.dyslexic-help {
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+}
+
+.w-fit-content {
+  width: fit-content;
+}

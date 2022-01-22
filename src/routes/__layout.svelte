@@ -1,45 +1,78 @@
-<script lang="ts">
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+<script context="module" lang="ts">
+  import { waitLocale } from 'svelte-i18n'
+  import '../i18n'
+
+  export async function load(): Promise<Record<string, never>> {
+    await waitLocale()
+
+    return {}
+  }
 </script>
 
-<Header />
+<script lang="ts">
+  import GoToMainContent from '$lib/components/GoToMainContent.svelte'
+  import { dyslexicMode, prefersReducedMotion, screen } from '$lib/stores'
+  import { DYSLEXIC_CLASSNAME } from '$lib/const'
 
-<main>
-	<slot />
-</main>
+  import '../styles/global.scss'
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+  let windowHeight: number
+  let windowWidth: number
 
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  const initPrefersReducedMotionStore = (): void => {
+    // bind prefersReducedMotion to localStorage
+    prefersReducedMotion.subscribe((value) => {
+      if (value !== null) {
+        window.localStorage.setItem(
+          'prefersReducedMotion',
+          JSON.stringify(value)
+        )
+      }
+    })
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    let storedValue = window.localStorage.getItem('prefersReducedMotion')
+    prefersReducedMotion.set(storedValue ? JSON.parse(storedValue) : false)
 
-	footer a {
-		font-weight: bold;
-	}
+    mediaQuery.addEventListener('change', () => {
+      const withoutAnimation = mediaQuery.matches
+      prefersReducedMotion.set(withoutAnimation)
+    })
+  }
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>
+  const initDyslexicModeStore = (): void => {
+    const bodyClassList = document.body.classList
+
+    // bind dyslexicMode to localStorage
+    dyslexicMode.subscribe((value) => {
+      if (value !== null) {
+        if (value) {
+          bodyClassList.add(DYSLEXIC_CLASSNAME)
+        } else {
+          bodyClassList.remove(DYSLEXIC_CLASSNAME)
+        }
+        window.localStorage.setItem('dyslexicMode', JSON.stringify(value))
+      }
+    })
+
+    let storedValue = window.localStorage.getItem('dyslexicMode')
+
+    dyslexicMode.set(storedValue ? JSON.parse(storedValue) : false)
+  }
+
+  $: {
+    screen.update(() => ({
+      height: windowHeight,
+      width: windowWidth,
+      device: windowWidth >= 768 ? 'computer' : 'mobile',
+    }))
+  }
+
+  initPrefersReducedMotionStore()
+  initDyslexicModeStore()
+</script>
+
+<svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
+
+<GoToMainContent />
+<slot />
