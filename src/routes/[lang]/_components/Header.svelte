@@ -6,7 +6,7 @@
 <header id="mainContent" class="position-relative">
   <div class="container text-white">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-md-8 offset-md-2">
         <div class="main-banner">
           <div class="d-sm-flex justify-content-between">
             <div data-aos={!$prefersReducedMotion && 'zoom-in-up'}>
@@ -15,18 +15,10 @@
               </div>
               <p class="mt-3">{$_('homepage.subtitle')}</p>
               <a
-                href={`/${$locale}/criteria`}
+                href="https://www.tesla.com/de_de/giga-berlin"
                 class="btn btn-outline-light mt-3"
                 >{$_('homepage.goto_criteria')}</a
               >
-            </div>
-            <div class="mt-5 mt-lg-0">
-              <img
-                src="/assets/banner-illustration.png"
-                alt=""
-                class="img-fluid"
-                data-aos={!$prefersReducedMotion && 'zoom-in-up'}
-              />
             </div>
           </div>
         </div>

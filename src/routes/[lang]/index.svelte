@@ -11,7 +11,6 @@
 
   import Header from './_components/Header.svelte'
   import Stats from './_components/Stats.svelte'
-  import Goals from './_components/Goals.svelte'
 
   onMount(() => {
     AOS.init()
@@ -24,19 +23,27 @@
 
 <Header />
 <main role="main">
-  <Goals />
-
   <Stats />
 
   <div class="d-flex justify-content-center mb-5">
     <a
-      href={`/${$locale}/criteria`}
+      href="https://www.tesla.com/de_de/giga-berlin"
       class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
       data-aos={!$prefersReducedMotion && 'flip-left'}
     >
       {$_('homepage.goto_criteria')}
     </a>
   </div>
+
+  <a
+    class="twitter-timeline"
+    href="https://twitter.com/Giga_Berlin?ref_src=twsrc%5Etfw"
+    >Tweets by Giga_Berlin</a
+  >
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"></script>
 </main>
 
 <Footer />
