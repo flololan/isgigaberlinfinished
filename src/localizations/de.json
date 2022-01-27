@@ -1,0 +1,35 @@
+{
+  "title": "Ist Giga Berlin schon fertig?",
+  "icon_alt": "Ein kleines Spaßprojekt | {website} (zurück zur Startseite)",
+  "settings": "Einstellungen",
+  "goto_main_content": "Zum Inhalt springen",
+  "goto_home_page": "Gehe zur Startseite",
+  "legal_mentions": "Rechtliche Hinweise",
+  "credits": "Danksagung",
+  "homepage": {
+    "title": "Ist Giga Berlin schon fertig?",
+    "response": "Nein",
+    "subtitle": "Es gibt noch einiges zu erledigen.",
+    "goto_tesla_website": "Besuche die offizielle Website",
+    "showTwitter": "Zeige Inhalte von Twitter",
+    "twitterExplain": "Durch Klick auf den Button akzeptieren Sie, dass Inhalte von Twitter geladen werden und somit auch die Datenschutzvereinbarung von Twitter.",
+    "hello_world": "Hallo Welt!",
+    "tradition_text": "Diese Website ist ein kleines Projekt inspiriert von {isBERdone} und {isS21done}.",
+    "collaboration": "Falls dir etwas auf dieser Website fehlt, kannst du es gerne auf GitHub hinzufügen."
+  },
+  "localisation": {
+    "select_language": "Sprache wählen",
+    "de": "Deutsch",
+    "en": "Französisch",
+    "country_flag": "{country} Flagge"
+  },
+  "footer": {
+    "build_with_love": "Gebastelt von",
+    "website_is": "Diese Website ist:",
+    "pleaseDontSueMe": "Diese Website ist nur zum Spaß entstandne und hat keinerlei Verbindung zur Firma Tesla. (Please don't sue me.)"
+  },
+  "settings_page": {
+    "reduced_motion": "Animationen reduzieren",
+    "dyslexic_mode": "Legasthenie-freundliche Schriftart verwenden."
+  }
+}

@@ -10,7 +10,7 @@
   import { prefersReducedMotion } from '$lib/stores'
 
   import Header from './_components/Header.svelte'
-  import Stats from './_components/Stats.svelte'
+  import InfoText from './_components/InfoText.svelte'
 
   onMount(() => {
     AOS.init()
@@ -23,27 +23,31 @@
 
 <Header />
 <main role="main">
-  <Stats />
+  <InfoText />
 
-  <div class="d-flex justify-content-center mb-5">
+  <div
+    class="container twitter-feed d-flex flex-column align-items-center justify-content-center"
+  >
     <a
-      href="https://www.tesla.com/de_de/giga-berlin"
+      onclick="showTwitter"
       class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
       data-aos={!$prefersReducedMotion && 'flip-left'}
     >
-      {$_('homepage.goto_criteria')}
+      {$_('homepage.showTwitter')}
     </a>
-  </div>
 
-  <a
-    class="twitter-timeline"
-    href="https://twitter.com/Giga_Berlin?ref_src=twsrc%5Etfw"
-    >Tweets by Giga_Berlin</a
-  >
-  <script
-    async
-    src="https://platform.twitter.com/widgets.js"
-    charset="utf-8"></script>
+    <div class="col-12 col-md-8 twitter-timeline">
+      <a
+        class="twitter-timeline"
+        href="https://twitter.com/Giga_Berlin?ref_src=twsrc%5Etfw"
+        >Tweets by Giga_Berlin</a
+      >
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"></script>
+    </div>
+  </div>
 </main>
 
 <Footer />

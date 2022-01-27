@@ -1,82 +1,33 @@
 {
-  "title": "Ergonomic criteria",
-  "icon_alt": "Guide to make your site ergonomic | {website} (back to home page)",
-  "criteria": "Criteria",
-  "contact": "Contact",
+  "title": "Is Giga Berlin done?",
+  "icon_alt": "Just a little fun project | {website} (back to home page)",
   "settings": "Settings",
   "goto_main_content": "Go to main content",
   "goto_home_page": "Go to the home page",
-  "email_addresse": "Email address",
-  "firstname": "First name",
-  "lastname": "Last name",
   "legal_mentions": "Legal Mentions",
   "credits": "Credits",
   "homepage": {
     "title": "Is giga Berlin done?",
+    "response": "No",
     "subtitle": "There are still some things left to do.",
-    "goto_criteria": "Visit the official website",
-    "satisfied_client": "Satisfied clients",
-    "team": "Team members",
-    "criteria_to_explore": "Criteria to explore",
-    "stats_title": "The guide in statistics",
-    "goals": {
-      "helps_to": "This guide will help you to",
-      "make_usable": "Make your site usable."
-    },
-    "criteria": {
-      "efficiency": {
-        "title": "Efficiency",
-        "text": "The user must be able to perform the action for which he entered the website in a simple way."
-      },
-      "efficient": {
-        "title": "Efficient",
-        "text": "The Internet user must be able to carry out his actions quickly and intuitively with as few errors as possible."
-      },
-      "satisfaction": {
-        "title": "Satisfaction",
-        "text": "Internet users must be satisfied once their action has been successfully completed."
-      }
-    }
+    "goto_tesla_website": "Visit the official website",
+    "showTwitter": "Show content from Twitter",
+    "twitterExplain": "By clicking on the button you accept to load content from Twitter and accept their privacy policies",
+    "hello_world": "Hello World!",
+    "tradition_text": "This website is just a little project inspired by {isBERdone} and {isS21done}.",
+    "collaboration": "If you want to add something you can do so via a pull request on GitHub."
   },
   "localisation": {
     "select_language": "Select language",
-    "fr": "French",
+    "de": "German",
     "en": "English",
     "country_flag": "{country} flag"
   },
-  "doc_nav": {
-    "close": "Close the criteria navigation",
-    "open": "Open the criteria navigation"
-  },
-  "contact_page": {
-    "success_message": "Your message has been sent successfully!",
-    "required_field": "Fields with the symbol (*) are required!",
-    "submit": "Send the message",
-    "currently": "Currently",
-    "back_to_contact": "Back to the contact form",
-    "invalid_info": {
-      "message_min_length": "Minimum {length} expected characters",
-      "firstname": "Please enter a first name longer than {length} characters",
-      "lastname": "Please enter a last name longer than {length} characters",
-      "email": "Please fill in a valid email like username@email.com"
-    }
-  },
-  "edit_this_criterion": "Edit this criterion",
-  "on_github": "on Github",
-  "previous_criterion": "Previous criterion",
-  "next_criterion": "Next criterion",
-  "refuse": "Refuse",
-  "accept": "Accept",
-  "close": "Close",
-  "cookie_banner_description": "We value your privacy... ",
-  "do_you_want_some_cookies": "Do you want some cookies ?",
   "footer": {
-    "build_with_love": "Build with {love} &nbsp;by",
-    "love": "Love",
+    "build_with_love": "Build in a rush by",
     "website_is": "This website is",
-    "accessibility": "Accessibility: partially compliant"
+    "pleaseDontSueMe": "This website is just for fun and is in no way related to Tesla. (Please don't sue me.)"
   },
-  "criterion": "Criterion",
   "settings_page": {
     "reduced_motion": "Minimize the amount of non-essential motion",
     "dyslexic_mode": "Use a dyslexia-friendly font"
