@@ -12,6 +12,8 @@
   import Header from './_components/Header.svelte'
   import InfoText from './_components/InfoText.svelte'
 
+  let showTwitter = false
+
   onMount(() => {
     AOS.init()
   })
@@ -28,25 +30,27 @@
   <div
     class="container twitter-feed d-flex flex-column align-items-center justify-content-center"
   >
-    <a
-      onclick="showTwitter"
+    <button
+      on:click={() => (showTwitter = true)}
       class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
       data-aos={!$prefersReducedMotion && 'flip-left'}
     >
       {$_('homepage.showTwitter')}
-    </a>
+    </button>
 
-    <div class="col-12 col-md-8 twitter-timeline">
-      <a
-        class="twitter-timeline"
-        href="https://twitter.com/Giga_Berlin?ref_src=twsrc%5Etfw"
-        >Tweets by Giga_Berlin</a
-      >
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"></script>
-    </div>
+    {#if showTwitter}
+      <div class="col-12 col-md-8 twitter-timeline">
+        <a
+          class="twitter-timeline"
+          href="https://twitter.com/Giga_Berlin?ref_src=twsrc%5Etfw"
+          >Tweets by Giga_Berlin</a
+        >
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"></script>
+      </div>
+    {/if}
   </div>
 </main>
 
