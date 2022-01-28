@@ -20,11 +20,6 @@
     class="list-unstyled d-flex flex-wrap justify-content-center mb-3 text-center"
   >
     <li>
-      <a href={`/${$locale}/legal-mentions`} class="link-light">
-        {$_('legal_mentions')}
-      </a>
-    </li>
-    <li>
       <a href={`/${$locale}/credits`} class="link-light">
         {$_('credits')}
       </a>
