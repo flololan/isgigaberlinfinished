@@ -12,7 +12,7 @@
     "subtitle": "There are still some things left to do.",
     "goto_tesla_website": "Visit the official website",
     "showTwitter": "Show content from Twitter",
-    "twitterExplain": "By clicking on the button you accept to load content from Twitter and accept their privacy policies",
+    "twitterExplain": "By clicking on the button you accept to load content from Twitter and accept their privacy policies.",
     "hello_world": "Hello World!",
     "tradition_text": "This website is just a little project inspired by {isBERdone} and {isS21done}.",
     "collaboration": "If you want to add something you can do so via a pull request on GitHub."

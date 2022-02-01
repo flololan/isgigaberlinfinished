@@ -37,6 +37,7 @@
     >
       {$_('homepage.showTwitter')}
     </button>
+    <p>{$_('homepage.twitterExplain')}</p>
 
     {#if showTwitter}
       <div class="col-12 col-md-8 twitter-timeline">
